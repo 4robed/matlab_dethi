@@ -38,32 +38,11 @@ for i=1:m
     end
 end
 
-tammax=[];
-tammin=[];
+tam=a(vtrmax,:);
 
-for i=vtrmin
-    for j=1:n
-        tammin=[tammin a(i,j)];
-    end
-end
+a(vtrmax,:)=a(vtrmin,:);
+a(vtrmin,:)=tam;
 
-for i=vtrmax
-    for j=1:n
-        tammax=[tammax a(i,j)];
-    end
-end
-
-for i=vtrmax
-    for j=1:n
-        a(i,j)=tammin(j);
-    end
-end
-
-for i=vtrmin
-    for j=1:n
-        a(i,j)=tammax(j);
-    end
-end
 
 disp('sau khi hoa doi hai dong co tong lon nhat va nho nhat')
 
