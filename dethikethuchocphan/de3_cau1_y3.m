@@ -24,3 +24,17 @@ end
 
 disp('dem duoc: ')
 count
+
+% cach 2
+
+dem = 0;
+for(i=1:length(a))
+    if(a(i)>=0.8 && a(i)<=0.85)
+        break;
+    end
+    dem = dem + 1;
+    if(i==n)
+        dem = 0;
+    end
+end
+dem
